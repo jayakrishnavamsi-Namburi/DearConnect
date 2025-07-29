@@ -11,6 +11,7 @@ export const AuthContext = createContext({});
 
 const client = axios.create({
   baseURL: `${server}/api/v1/users`,
+  withCredentials: true
 });
 
 export const AuthProvider = ({ children }) => {

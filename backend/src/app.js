@@ -20,7 +20,16 @@ const server = createServer(app);
 const io =  connectTOSocket(server);
 
 const PORT =  process.env.PORT || 5000;
-app.use(cors());
+const allowedOrigins = [
+  "https://dearconnect.onrender.com",
+  "http://localhost:3000"
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true
+}));
+
 app.use(express.json({limit:"40kb"}));
 app.use(express.urlencoded({limit:"40kb" , extended:true}));
 app.use("/api/v1/users",userRoutes);
