@@ -1,9 +1,3 @@
-// src/utils/environment.js
-
-let IS_PROD = true;
-
-const server = IS_PROD
-  ? "https://dearconnectbackend.onrender.com"  // ✅ deployed backend
-  : "http://localhost:10000";                   // dev backend
-
+let IS_PROD = false;
+const server = IS_PROD ? "https://dearconnectbackend.onrender.com" : "http://localhost:10000";
 export default server;
