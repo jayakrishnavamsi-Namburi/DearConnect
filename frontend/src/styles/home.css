@@ -1,0 +1,165 @@
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Navbar */
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ccc;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  color: #0077b6;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.navToggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Navigation Links */
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navLinks.open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  z-index: 1001;
+}
+
+/* History */
+.historyNav {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+  color: #0077b6;
+  transition: color 0.3s ease;
+}
+
+.historyNav:hover {
+  color: #023e8a;
+}
+
+.historyNav span {
+  font-weight: 500;
+}
+
+/* Main container */
+.meetContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 4rem;
+  min-height: 80vh;
+  gap: 2rem;
+}
+
+.leftPanel {
+  flex: 1;
+}
+
+.leftPanel h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #03045e;
+}
+
+.joinControls {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.joinControls input,
+.joinControls .MuiButton-root {
+  font-size: 1rem;
+}
+
+/* Right panel (image) */
+.rightPanel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.rightPanel img {
+  width: 100%;
+  max-width: 500px;
+  object-fit: contain;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .meetContainer {
+    flex-direction: column-reverse;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .rightPanel img {
+    max-width: 400px;
+  }
+
+  .leftPanel h2 {
+    font-size: 1.5rem;
+  }
+
+  .joinControls {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+  }
+
+  .navLinks.open {
+    display: flex;
+  }
+
+  .navToggle {
+    display: block;
+  }
+
+  .joinControls {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .leftPanel h2 {
+    font-size: 1.2rem;
+  }
+}
