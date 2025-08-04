@@ -1,0 +1,128 @@
+.zoom-auth-root {
+  height: 100vh;
+  display: flex;
+ 
+  flex-direction: row;
+}
+
+.zoom-auth-form-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: #ffffff;
+}
+
+.zoom-auth-box {
+  max-width: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Optional for form inputs inside */
+  text-align: center;
+}
+
+.zoom-auth-title {
+  font-weight: 600;
+  margin: 16px 0;
+  color: #2D2D2D;
+  font-size: 24px;
+}
+
+.zoom-auth-form-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;  /* Center horizontally */
+  align-items: center;      /* Center vertically */
+  background-color: #ffffff;
+  padding: 0 20px;
+}
+
+.zoom-auth-video {
+  position: relative;
+  width: 70%;        /* smaller size */
+  height: auto;
+  object-fit: contain;
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+.zoom-auth-quote-container {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.zoom-auth-quote {
+  font-size: 18px;
+  font-style: italic;
+  color: #2d2d2d;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 12px 20px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+
+.lobbyContainer {
+  display: flex;
+  height: 100vh;         /* Full viewport height */
+  background: #fafbfc;
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* Centers vertically */
+  align-items: center;
+  padding: 32px;
+  background: #fff;
+  box-shadow: 2px 0 12px rgba(0,0,0,0.06);
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  align-items: center;      /* Centers video vertically */
+  justify-content: center;  /* Centers video horizontally */
+  background: #f3f4f7;
+}
+
+.mainhead {
+  margin-bottom: 24px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.videoStream video {
+  width: 420px;
+  height: 300px;
+  background: #222;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.11);
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .lobbyContainer {
+    flex-direction: column;
+  }
+  .left, .right {
+    flex: unset;
+    width: 100%;
+    min-width: 0;
+    box-shadow: none;
+    padding: 24px 5vw;
+  }
+  .videoStream video {
+    width: 100%;
+    min-width: 220px;
+    max-width: 100vw;
+    height: 220px;
+  }
+}
