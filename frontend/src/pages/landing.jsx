@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../contexts/AuthContext';
 import zoomVideo from '../videos/ZoomBackground.mp4';
-import '../styles/Landing.css';
+import '../styles/landingPage.css';
 
 export default function LandingPage() {
   const { user, logoutUser } = useContext(AuthContext);
