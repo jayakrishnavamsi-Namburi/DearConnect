@@ -210,7 +210,6 @@
   position: absolute;
   bottom: 24px;
   left: 50%;
-  margin-bottom: 2rem;
   transform: translateX(-50%);
   display: flex;
   gap: 20px;
@@ -563,6 +562,21 @@ video {
     width: 100%;  /* Full width for stacked children */
     flex: none;
   }
+  .buttonContainers {
+  position: absolute; 
+  bottom: 24px;
+  left: 50%;
+  margin-bottom: 3rem;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 14px 32px;
+  border-radius: 9999px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  z-index: 50;
+  transition: background-color 0.4s ease;
+}
 }
 
 /* Small devices (mobile phones, ~600px and below) */
@@ -614,6 +628,7 @@ video {
     flex-shrink: 0;
     padding: 12px;
     border-top: 1px solid #ddd;
+    margin-bottom: 3rem;
     background-color: var(--color-bg-light);
   }
   .conferenceView {
@@ -625,6 +640,21 @@ video {
     width: 90vw !important;
     height: 25vh !important;
   }
+  .buttonContainers {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  margin-bottom: 3rem;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 14px 32px;
+  border-radius: 9999px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  z-index: 50;
+  transition: background-color 0.4s ease;
+}
 }
 
 

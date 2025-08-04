@@ -11,6 +11,7 @@ import StopScreenShareIcon from '@mui/icons-material/StopScreenShare';
 import ChatIcon from '@mui/icons-material/Chat';
 import styles from "../styles/videoComponent.module.css";  // Your CSS module
 import server from '../environment.js';
+import { useNavigate } from 'react-router-dom';
 
 
 const server_url = server;
@@ -25,6 +26,7 @@ export default function VideoMeetComponent() {
   const socketIdRef = useRef();
   const localVideoref = useRef();
   const videoRef = useRef([]);
+   
 
   const [videoAvailable, setVideoAvailable] = useState(true);
   const [audioAvailable, setAudioAvailable] = useState(true);
@@ -41,6 +43,7 @@ export default function VideoMeetComponent() {
   const [username, setUsername] = useState("");
   const [showChat, setShowChat] = useState(false);
   const [videos, setVideos] = useState([]); // remote video streams
+  const navigate = useNavigate();
 
   // Permissions check on mount
   useEffect(() => {
@@ -323,7 +326,7 @@ export default function VideoMeetComponent() {
     try {
       localVideoref.current.srcObject?.getTracks().forEach(track => track.stop());
     } catch (e) {}
-    window.location.href = "/home";
+    navigate("/home");
   };
 
   const connect = () => {
