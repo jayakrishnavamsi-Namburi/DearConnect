@@ -351,7 +351,7 @@ export default function VideoMeetComponent() {
           <div className={styles.left}>
             <div>
               <div className={styles.videoStream} style={{ marginTop: 24}}>
-                <video ref={localVideoref} autoPlay muted playsInline />
+                <video ref={localVideoref} autoPlay muted playsInline  style={{  transform: "scaleX(-1)" }} />
               </div>
             </div>
           </div>
@@ -452,7 +452,7 @@ export default function VideoMeetComponent() {
           </div>
 
           {/* Local video preview (small) */}
-          <video className={styles.meetUserVideo} ref={localVideoref} autoPlay muted playsInline style={{ border: "2px solid red" }}></video>
+          <video className={styles.meetUserVideo} ref={localVideoref} autoPlay muted playsInline style={{ border: "2px solid red" , transform: "scaleX(-1)" }}></video>
           {/* Remote users */}
           <div className={styles.conferenceView} data-count={videos.length}>
             
@@ -463,6 +463,7 @@ export default function VideoMeetComponent() {
             ref={ref => { if (ref) ref.srcObject = stream; }}
             autoPlay
             playsInline
+            style={{  transform: "scaleX(-1)" }}
             />
               </div>
             ))}
